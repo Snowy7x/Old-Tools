@@ -1,0 +1,27 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+#include "../Includes/Noise.compute"
+#include "../Includes/Utils.compute"
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+int seed = 0;
+int width = 256;
+int height = 256;
+int depth = 256;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // Generate a perlin noise value and write it to the RWTexture2D
+    for (int i = 0; i < width; i++)
+    {
+        for (int j = 0; j < height; j++) {
+            float x = (float)i / width;
+            float y = (float)j / height;
+            float noise = snoise(float3(x + seed, y + seed, depth + seed));
+            Result[int2(i, j)] = noise;
+        }
+    }
+}

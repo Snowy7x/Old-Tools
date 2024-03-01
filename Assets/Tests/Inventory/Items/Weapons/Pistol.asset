@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3d5e68d17147b0aea28c12c1354f0d, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  itemName: Pistol
+  itemSprite: {fileID: 21300000, guid: 65135c38fe4f6204ba27b6193853c7ce, type: 3}
+  isStackable: 0
+  maxStack: 1
+  holdAnimationStateName: Pistol Hold
+  invObject: {fileID: 5448934489743848990, guid: 3826058e54e258a44a131a1213f8df2c,
+    type: 3}
+  itemPrefab: {fileID: 2047012372273947720, guid: 3826058e54e258a44a131a1213f8df2c,
+    type: 3}
+  damage: 20
+  range: 1000
+  fireRate: 0.1
+  reloadTime: 1
+  maxAmmo: 10
+  clipSize: 10
+  isAutomatic: 0
+  recoilProfile: {fileID: 11400000, guid: a87d98e05b11a5946b1ffb635ffa6fbe, type: 2}
+  bulletPrefab: {fileID: 7436720856443668728, guid: b1b85331200d63140ac80912d9e4eac1,
+    type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4498e10621641c1bf0871abec748a9b, type: 3}
+  m_Name: Test 2
+  m_EditorClassIdentifier: 
+  itemName: Test 2
+  itemSprite: {fileID: 21300000, guid: 35b631124158b7b4d9714f84f476b049, type: 3}
+  isStackable: 0
+  maxStack: 1
+  invObject: {fileID: 8068952144329786581, guid: df81d5f0daf497d4e98da2a218c0d215,
+    type: 3}
+  itemPrefab: {fileID: 7094065287118104102, guid: df81d5f0daf497d4e98da2a218c0d215,
+    type: 3}

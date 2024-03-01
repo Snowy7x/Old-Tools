@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4734806919357558137
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98e42124d794d24baddf03f67db4d0b, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  preOrderIndex: 0
+  indexOrder: 0
+  title: 
+  comment: 
+  bonsaiNodePosition: {x: -112.5, y: -169.5}
+  children:
+  - {fileID: 3525930938572030952}
+  - {fileID: 7675998249213064470}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cce61d428e48b4a13805b438ea27da, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: 
+  allNodes:
+  - {fileID: -4734806919357558137}
+  - {fileID: 3525930938572030952}
+  - {fileID: 7675998249213064470}
+  blackboard: {fileID: 1272735082004803968}
+  actor: {fileID: 0}
+  panPosition: {x: 0, y: 0}
+  zoomPosition: {x: 1, y: 1}
+  unusedNodes: []
+  playerTag: Player
+--- !u!114 &1272735082004803968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a07908f6a5fd44e906d041ac135bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: []
+--- !u!114 &3525930938572030952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16dec75e8cee4ddca10b6ee5fc02cdda, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: 
+  preOrderIndex: 1
+  indexOrder: 0
+  title: 
+  comment: 
+  bonsaiNodePosition: {x: -197, y: -13.5}
+  playerTag: Player
+  useAttackAnimation: 0
+  damageType: 3
+  damage: 10
+  range: 10
+  cooldown: 1
+--- !u!114 &7675998249213064470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822914705e95c4f40b065b030dc4487d, type: 3}
+  m_Name: Print
+  m_EditorClassIdentifier: 
+  preOrderIndex: 2
+  indexOrder: 1
+  title: 
+  comment: 
+  bonsaiNodePosition: {x: 110.5, y: -1.5}
+  message: Attacked
+  logType: 0

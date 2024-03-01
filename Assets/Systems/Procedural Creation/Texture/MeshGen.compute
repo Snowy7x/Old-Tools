@@ -1,0 +1,50 @@
+﻿#pragma kernel CSMain
+
+int seed = 0;
+int width = 256;
+int height = 256;
+
+// Vertices & Triangles as RWStructuredBuffer
+RWStructuredBuffer<float3> Vertices;
+RWStructuredBuffer<int> Triangles;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // Skip generation if out of bounds
+    if (id.x > width || id.y > height)
+        return;
+
+    // Mesh generation
+    int index = id.x + id.y * width;
+    int vertexIndex = index * 4;
+    int triangleIndex = index * 6;
+
+    // Vertices
+    float3 v0 = float3(id.x, id.y, 0);
+    float3 v1 = float3(id.x + 1, id.y, 0);
+    float3 v2 = float3(id.x, id.y + 1, 0);
+    float3 v3 = float3(id.x + 1, id.y + 1, 0);
+
+    // Triangles
+    int t0 = vertexIndex;
+    int t1 = vertexIndex + width + 1;
+    int t2 = vertexIndex + 1;
+    int t3 = vertexIndex + width + 1;
+    int t4 = vertexIndex + 1;
+    int t5 = vertexIndex + width + 2;
+
+    // Write vertices
+    Vertices[vertexIndex] = v0;
+    Vertices[vertexIndex + 1] = v1;
+    Vertices[vertexIndex + 2] = v2;
+    Vertices[vertexIndex + 3] = v3;
+
+    // Write triangles
+    Triangles[triangleIndex] = t0;
+    Triangles[triangleIndex + 1] = t1;
+    Triangles[triangleIndex + 2] = t2;
+    Triangles[triangleIndex + 3] = t3;
+    Triangles[triangleIndex + 4] = t4;
+    Triangles[triangleIndex + 5] = t5;
+}
